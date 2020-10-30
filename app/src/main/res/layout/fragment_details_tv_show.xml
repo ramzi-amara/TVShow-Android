@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/fragment_details_tv_show_scene"
+    tools:context=".Fragments.DetailsTvShowFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".Fragments.DetailsTvShowFragment">
+
+            <ImageView
+                android:id="@+id/imgDetailsTvShow"
+                android:layout_width="165dp"
+                android:layout_height="235dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:contentDescription="TODO"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/txt_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="30sp"
+                app:layout_constraintStart_toEndOf="@+id/imgDetailsTvShow"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Title" />
+
+            <TextView
+                android:id="@+id/txt_Year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/imgDetailsTvShow"
+                app:layout_constraintTop_toBottomOf="@+id/txt_Title"
+                tools:text="Year" />
+
+            <TextView
+                android:id="@+id/txt_NombreEpisodes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/imgDetailsTvShow"
+                app:layout_constraintTop_toBottomOf="@+id/txt_Year"
+                tools:text="Nombre Episodes" />
+
+            <TextView
+                android:id="@+id/txt_resume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgDetailsTvShow"
+                tools:text="Resume" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Cast"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_resume" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_Role"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5"
+                tools:itemCount="1" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Seasons"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_Role" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_Seasons"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6"
+                tools:itemCount="1" />
+
+            <ImageButton
+                android:id="@+id/imgBtn_Favorite_DetailsTvShow"
+                android:layout_width="52dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toEndOf="@+id/imgDetailsTvShow"
+                app:layout_constraintTop_toBottomOf="@+id/txt_NombreEpisodes" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
